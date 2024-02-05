@@ -1,21 +1,36 @@
 <?php
 if (isset($error) && !empty($error)) { ?>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <div class="error alert">
         <?php
         echo $error;
         ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php
 }
 
 if (isset($success) && !empty($success)) { ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="success alert">
         <?php
         echo $success;
         ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php
 }
 ?>
+
+<style>
+    .alert{
+        padding: 5px;
+        border-radius: 4px;
+        color: red;
+    }
+    .error{
+        background-color: #f23565;
+        color: #ffff;
+    }
+
+    .success{
+        background-color: lightgreen;
+    }
+
+</style>
